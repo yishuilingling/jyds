@@ -1,0 +1,687 @@
+<!doctype html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<title>精英大赛</title>
+	<meta name="keywords" content="">
+	<meta name="description" content="">
+	<link rel="stylesheet" href="reset.css">
+	<style>
+		.box{
+			margin: 0 auto;
+		}
+		.top{
+			text-align: center;
+			position: relative;
+		}
+		.word{
+			position: absolute;
+			right: 15px;
+			bottom: 80px;
+			font-size: 12px;
+			color: #fed483;
+		}
+		.word .word1{
+			font-size: 13px;
+		}
+		.word .word2{
+			color: #fff;	
+		}
+		.word .word3{
+			text-decoration: underline;
+			color: #fed483;
+		}
+		.letter{
+			font-size: 14px;
+			text-align: center;
+		}
+		.letter .word1{
+			position: absolute;
+			bottom: 30px;
+			left: 250px;
+		}
+		.letter .word2{
+			position: absolute;
+			bottom: 22px;
+			left: 451px;
+		}
+		.letter .word3{
+			color: #999;
+			position: absolute;
+			bottom: 22px;
+			left: 661px;
+		}
+		.letter .word4{
+			color: #999;
+			position: absolute;
+			bottom: 30px;
+			left: 860px;
+		}
+		.letter .word5{
+			position: absolute;
+			bottom: 30px;
+			right: 441px;
+		}
+		.letter .word6{
+			position: absolute;
+			bottom: 30px;
+			right: 250px;
+		}
+		.center{
+			overflow: hidden;
+			width: 70%;
+			margin: 10px auto;
+		}
+		.outer{
+			background: url(images/add.jpg) 0 -39px repeat-x;
+		}
+		.left{
+			background: url(images/add.jpg) 0 0 no-repeat;
+		}
+		.right{
+			background: url(images/add.jpg) right -78px no-repeat;
+			overflow: hidden;
+		}
+		.right span{
+			font-size: 14px;
+			line-height: 39px;
+			float: left;
+			padding-left: 40px;
+		}
+		.c_left{
+			width: 222px;
+			float: left;
+		}
+		.bottom{
+			height: 63px;
+			background:#003979;
+			margin-top: 30px;
+		}
+		.c_right{
+			overflow: hidden;
+			margin-top:10px ;
+		}
+		.c_right1{
+			width: 69px;
+			height: 29px;
+			line-height: 29px;
+			text-align: center;
+			background: #eee;
+			float: right;
+		}
+		.c_right2{
+			width: 69px;
+			height: 29px;
+			line-height: 29px;
+			background: #003979;
+			text-align: center;
+			margin-left: 1px;
+			float: right;
+		}
+		.c_center{
+			height: 400px;
+			background: #e9e9e9;
+			border-top: 2px solid #003979;
+		}
+		.c_center_top{
+			height: 213px;
+			margin: 20px 30px;
+			overflow: hidden;
+			background: #fff;
+		}
+		.c_photo1{
+			width: 330px;
+			height: 180px;
+			margin: 20px;
+			float: left;
+			overflow: hidden;
+		}
+		.photo11{
+			width: 100px;
+			height: 100px;
+			background: url(images/1.jpg) 0 0 no-repeat;
+			float: left;
+			margin: 0 10px 10px 0;
+		}
+		.photo12{
+			width: 100px;
+			height: 100px;
+			background: url(images/8.jpg) 0 0 no-repeat;
+			float: left;
+			margin: 0 10px 10px 0;
+		}
+		.photo1{
+			overflow: hidden;
+		}
+		.c_photo2{
+			width: 285px;
+			height: 161px;
+			background: url(images/2.jpg) 0 0 no-repeat;
+			float: left;
+			margin: 25px 40px 0 20px;
+		}
+		.c_photo3{
+			width: 285px;
+			height: 141px;
+			background:#e9e9e9 ;
+			border:1px solid  #666;
+			border-bottom: none;
+			border-right: none;
+			padding: 10px;
+			float: right;
+			margin: 25px 27px 0 0;
+		}
+		.c_photo4{
+			width: 285px;
+			height: 161px;
+			background: url(images/9.jpg) 0 0 no-repeat;
+			float: left;
+			margin: 15px 20px 0 40px;
+		}
+		ul li,.letter1 a{
+			font-size: 13px;
+			color: #ca0a30;
+			line-height: 2em;
+		}
+		ul li span,.span{
+			color: #000;
+			font-size: 13px;
+			line-height: 25px;
+		}
+		.letter1{
+			color: #ca0a30;
+			font-size: 14px;
+			line-height: 25px;
+		}
+		.letter1 span{
+			color: #000;
+			font-size: 13px;
+			line-height: 15px;
+		}
+		.c_center_bottom{
+			height: 150px;
+			margin: 4px;
+			overflow: hidden;
+		}
+		.cb_box1{
+			width: 225px;
+			height: 100px;
+			background: #fff;
+			overflow: hidden;
+			float: left;
+			margin: 10px 25px;
+		}
+		.cb_photo1{
+			width: 100px;
+			height: 100px;
+			background: url(images/3.jpg) 0 0 no-repeat;
+			float: left;
+		}
+		.cb_photo2{
+			width: 100px;
+			height: 100px;
+			background: url(images/4.jpg) 0 0 no-repeat;
+			float: left;
+		}
+		.cb_photo3{
+			width: 100px;
+			height: 100px;
+			background: url(images/5.jpg) 0 0 no-repeat;
+			float: left;
+		}
+		.cb_photo4{
+			width: 100px;
+			height: 100px;
+			background: url(images/6.jpg) 0 0 no-repeat;
+			float: left;
+		}
+		.top img{
+			width:100%;
+		}
+	</style>
+</head>
+<body>
+	<div class="box">
+		<div class="top">
+			<img src="images/top.jpg" alt="精英大赛">
+			<div class="word">
+				<span class="word1">abcdjiskl123</span>
+				<span class="word2">欢迎回来,</span>
+				<a href="###" class="word3">退出</a>
+			</div>
+			<div class="letter">
+				<span class="word1">电话邀约录音竞赛</span>
+				<span class="word2">新奇骏原创内容<br/>微博分享竞赛</span>
+				<span class="word3">网络公关软文<br/>分享竞赛</span>
+				<span class="word4">车主活动竞赛</span>
+				<span class="word5">每月榜单汇总</span>
+				<span class="word6">大赛精彩回顾</span>
+			</div>
+		</div>
+		<div class="center">
+			<div class="c_left">
+				<div class="outer">
+					<div class="left">
+						<div class="right">
+							<span>电话邀约录音竞赛</span>
+						</div>
+					</div>
+				</div>
+			</div>
+			<div class="c_right">
+				<div class="c_right2">7月</div>
+				<div class="c_right2">6月</div>
+				<div class="c_right1">5月</div>
+			</div>
+			<div class="c_center">
+				<div class="c_center_top">
+					<div class="c_photo1">
+						<div class="photo1">
+							<div class="photo11"></div>
+							<ul>
+								<li>姓名：
+									<span>吴荣荣</span>
+								</li>
+								<li>年龄：
+									<span>22</span>
+								</li>
+								<li>岗位：
+									<span>电销员</span>
+								</li>
+								<li>专营店：
+									<span>上饶东信</span>
+								</li>
+							</ul>
+						</div>
+						<div class="letter1">作品描述：</br>
+							<span>突出奇骏产品卖点，不断挖掘客户信息和邀约进店！</span>
+						</div>
+					</div>
+					<div class="c_photo2"></div>
+					<div class="c_photo3">
+						<span class="letter1">点评：</span><br/>
+						<span class="span">"针对客户关于免3年盗抢险问题能为客户清晰解答；在得知客户也相中竞品CRV的时候，电销员为客户做出车型的对比，着重介绍了新奇骏的道路安全性能，最后借助周末活动邀约客户到店。"</span>
+					</div>
+				</div>
+				<div class="c_center_bottom">
+					<div class="cb_box1">
+						<div class="cb_photo1"></div>
+						<ul>
+							<li>姓名：
+								<span>吴荣荣</span>
+							</li>
+							<li>年龄：
+								<span>22</span>
+							</li>
+							<li>岗位：
+								<span>电销员</span>
+							</li>
+						</ul>
+					</div>
+					<div class="cb_box1">
+						<div class="cb_photo2"></div>
+						<ul>
+							<li>姓名：
+								<span>吴荣荣</span>
+							</li>
+							<li>年龄：
+								<span>22</span>
+							</li>
+							<li>岗位：
+								<span>电销员</span>
+							</li>
+						</ul>
+					</div>
+					<div class="cb_box1">
+						<div class="cb_photo3"></div>
+						<ul>
+							<li>姓名：
+								<span>吴荣荣</span>
+							</li>
+							<li>年龄：
+								<span>22</span>
+							</li>
+							<li>岗位：
+								<span>电销员</span>
+							</li>
+						</ul>
+					</div>
+					<div class="cb_box1">
+						<div class="cb_photo4"></div>
+						<ul>
+							<li>姓名：
+								<span>吴荣荣</span>
+							</li>
+							<li>年龄：
+								<span>22</span>
+							</li>
+							<li>岗位：
+								<span>电销员</span>
+							</li>
+						</ul>
+					</div>
+				</div>
+			</div>
+		</div>
+		<div class="center">
+			<div class="c_left">
+				<div class="outer">
+					<div class="left">
+						<div class="right">
+							<span>原创内容微博分享竞赛</span>
+						</div>
+					</div>
+				</div>
+			</div>
+			<div class="c_right">
+				<div class="c_right2">7月</div>
+				<div class="c_right2">6月</div>
+				<div class="c_right1">5月</div>
+			</div>
+			<div class="c_center">
+				<div class="c_center_top">
+					<div class="c_photo1">
+						<div class="photo1">
+							<div class="photo12"></div>
+							<ul>
+								<li>姓名：
+									<span>杨璐</span>
+								</li>
+								<li>年龄：
+									<span>32</span>
+								</li>
+								<li>岗位：
+									<span>电销员</span>
+								</li>
+								<li>专营店：
+									<span>上饶东信</span>
+								</li>
+							</ul>
+						</div>
+						<div class="letter1">作品描述：</br>
+							<span>吃货小伙伴们终于等到舌尖2开播啦，有没有立马收拾行囊，踏上探寻美食之路的冲动呢......</span>
+							<a href="###">查看详情&gt;&gt;</a>
+						</div>
+					</div>
+					<div class="c_photo4"></div>
+					<div class="c_photo3">
+						<span class="letter1">点评：</span><br/>
+						<span class="span">用时下热门的节目舌尖2，带出奇骏自驾。</span>
+					</div>
+				</div>
+				<div class="c_center_bottom">
+					<div class="cb_box1">
+						<div class="cb_photo1"></div>
+						<ul>
+							<li>姓名：
+								<span>吴荣荣</span>
+							</li>
+							<li>年龄：
+								<span>22</span>
+							</li>
+							<li>岗位：
+								<span>电销员</span>
+							</li>
+						</ul>
+					</div>
+					<div class="cb_box1">
+						<div class="cb_photo2"></div>
+						<ul>
+							<li>姓名：
+								<span>吴荣荣</span>
+							</li>
+							<li>年龄：
+								<span>22</span>
+							</li>
+							<li>岗位：
+								<span>电销员</span>
+							</li>
+						</ul>
+					</div>
+					<div class="cb_box1">
+						<div class="cb_photo3"></div>
+						<ul>
+							<li>姓名：
+								<span>吴荣荣</span>
+							</li>
+							<li>年龄：
+								<span>22</span>
+							</li>
+							<li>岗位：
+								<span>电销员</span>
+							</li>
+						</ul>
+					</div>
+					<div class="cb_box1">
+						<div class="cb_photo4"></div>
+						<ul>
+							<li>姓名：
+								<span>吴荣荣</span>
+							</li>
+							<li>年龄：
+								<span>22</span>
+							</li>
+							<li>岗位：
+								<span>电销员</span>
+							</li>
+						</ul>
+					</div>
+				</div>
+			</div>
+		</div>
+		<div class="center">
+			<div class="c_left">
+				<div class="outer">
+					<div class="left">
+						<div class="right">
+							<span>网络公共软文分享竞赛</span>
+						</div>
+					</div>
+				</div>
+			</div>
+			<div class="c_right">
+				<div class="c_right2">10月</div>
+				<div class="c_right2">9月</div>
+				<div class="c_right1">8月</div>
+			</div>
+			<div class="c_center">
+				<div class="c_center_top">
+					<div class="c_photo1">
+						<div class="photo1">
+							<div class="photo12"></div>
+							<ul>
+								<li>姓名：
+									<span>杨璐</span>
+								</li>
+								<li>年龄：
+									<span>32</span>
+								</li>
+								<li>岗位：
+									<span>电销员</span>
+								</li>
+								<li>专营店：
+									<span>上饶东信</span>
+								</li>
+							</ul>
+						</div>
+						<div class="letter1">作品描述：</br>
+							<span>吃货小伙伴们终于等到舌尖2开播啦，有没有立马收拾行囊，踏上探寻美食之路的冲动呢......</span>
+							<a href="###">查看详情&gt;&gt;</a>
+						</div>
+					</div>
+					<div class="c_photo4"></div>
+					<div class="c_photo3">
+						<span class="letter1">点评：</span><br/>
+						<span class="span">用时下热门的节目舌尖2，带出奇骏自驾。</span>
+					</div>
+				</div>
+				<div class="c_center_bottom">
+					<div class="cb_box1">
+						<div class="cb_photo1"></div>
+						<ul>
+							<li>姓名：
+								<span>吴荣荣</span>
+							</li>
+							<li>年龄：
+								<span>22</span>
+							</li>
+							<li>岗位：
+								<span>电销员</span>
+							</li>
+						</ul>
+					</div>
+					<div class="cb_box1">
+						<div class="cb_photo2"></div>
+						<ul>
+							<li>姓名：
+								<span>吴荣荣</span>
+							</li>
+							<li>年龄：
+								<span>22</span>
+							</li>
+							<li>岗位：
+								<span>电销员</span>
+							</li>
+						</ul>
+					</div>
+					<div class="cb_box1">
+						<div class="cb_photo3"></div>
+						<ul>
+							<li>姓名：
+								<span>吴荣荣</span>
+							</li>
+							<li>年龄：
+								<span>22</span>
+							</li>
+							<li>岗位：
+								<span>电销员</span>
+							</li>
+						</ul>
+					</div>
+					<div class="cb_box1">
+						<div class="cb_photo4"></div>
+						<ul>
+							<li>姓名：
+								<span>吴荣荣</span>
+							</li>
+							<li>年龄：
+								<span>22</span>
+							</li>
+							<li>岗位：
+								<span>电销员</span>
+							</li>
+						</ul>
+					</div>
+				</div>
+			</div>
+		</div>
+		<div class="center">
+			<div class="c_left">
+				<div class="outer">
+					<div class="left">
+						<div class="right">
+							<span>车主活动竞赛</span>
+						</div>
+					</div>
+				</div>
+			</div>
+			<div class="c_right">
+				<div class="c_right2">10月</div>
+				<div class="c_right2">9月</div>
+				<div class="c_right1">8月</div>
+			</div>
+			<div class="c_center">
+				<div class="c_center_top">
+					<div class="c_photo1">
+						<div class="photo1">
+							<div class="photo12"></div>
+							<ul>
+								<li>姓名：
+									<span>杨璐</span>
+								</li>
+								<li>年龄：
+									<span>32</span>
+								</li>
+								<li>岗位：
+									<span>电销员</span>
+								</li>
+								<li>专营店：
+									<span>上饶东信</span>
+								</li>
+							</ul>
+						</div>
+						<div class="letter1">作品描述：</br>
+							<span>吃货小伙伴们终于等到舌尖2开播啦，有没有立马收拾行囊，踏上探寻美食之路的冲动呢......</span>
+							<a href="###">查看详情&gt;&gt;</a>
+						</div>
+					</div>
+					<div class="c_photo4"></div>
+					<div class="c_photo3">
+						<span class="letter1">点评：</span><br/>
+						<span class="span">用时下热门的节目舌尖2，带出奇骏自驾。</span>
+					</div>
+				</div>
+				<div class="c_center_bottom">
+					<div class="cb_box1">
+						<div class="cb_photo1"></div>
+						<ul>
+							<li>姓名：
+								<span>吴荣荣</span>
+							</li>
+							<li>年龄：
+								<span>22</span>
+							</li>
+							<li>岗位：
+								<span>电销员</span>
+							</li>
+						</ul>
+					</div>
+					<div class="cb_box1">
+						<div class="cb_photo2"></div>
+						<ul>
+							<li>姓名：
+								<span>吴荣荣</span>
+							</li>
+							<li>年龄：
+								<span>22</span>
+							</li>
+							<li>岗位：
+								<span>电销员</span>
+							</li>
+						</ul>
+					</div>
+					<div class="cb_box1">
+						<div class="cb_photo3"></div>
+						<ul>
+							<li>姓名：
+								<span>吴荣荣</span>
+							</li>
+							<li>年龄：
+								<span>22</span>
+							</li>
+							<li>岗位：
+								<span>电销员</span>
+							</li>
+						</ul>
+					</div>
+					<div class="cb_box1">
+						<div class="cb_photo4"></div>
+						<ul>
+							<li>姓名：
+								<span>吴荣荣</span>
+							</li>
+							<li>年龄：
+								<span>22</span>
+							</li>
+							<li>岗位：
+								<span>电销员</span>
+							</li>
+						</ul>
+					</div>
+				</div>
+			</div>
+		</div>
+		<div class="bottom"></div>
+	</div>
+</body>
+</html>
